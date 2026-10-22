@@ -1,0 +1,5 @@
+{
+	"mcpServers": {
+		"moving-polygons": { "type": "http", "url": "https://www.movingpolygons.com/mcp" }
+	}
+}

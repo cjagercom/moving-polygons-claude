@@ -1,0 +1,134 @@
+{
+  "map": {
+    "name": "Battle of Waterloo, 18 June 1815",
+    "description": "Napoleon's Armée du Nord against Wellington's Anglo-allied army and Blücher's Prussians, south of Waterloo in present-day Belgium. Positions are simplified: lines and blocks show where the main bodies stood, arrows the decisive attacks. Times are approximate, as in most accounts. Sources: Wikipedia (Battle of Waterloo; Hougoumont; La Haye Sainte; Plancenoit), Hofschröer 1815: The Waterloo Campaign.",
+    "mapStyle": "outdoors"
+  },
+  "scale": "battle",
+  "bbox": [4.36, 50.645, 4.49, 50.70],
+  "build": {"territory_clip": "none"},
+  "keyframes": [
+    {"id": "K1", "date": "1815-06-18T10:00", "label": "10:00 · The armies deploy south of Waterloo"},
+    {"id": "K2", "date": "1815-06-18T11:30", "label": "11:30 · French attack on Hougoumont"},
+    {"id": "K3", "date": "1815-06-18T13:30", "label": "13:30 · d'Erlon's I Corps attacks the ridge"},
+    {"id": "K4", "date": "1815-06-18T14:15", "label": "14:15 · British heavy cavalry charge"},
+    {"id": "K5", "date": "1815-06-18T16:00", "label": "16:00 · Ney's cavalry; Prussians emerge"},
+    {"id": "K6", "date": "1815-06-18T16:30", "label": "16:30 · Prussians attack Plancenoit"},
+    {"id": "K7", "date": "1815-06-18T18:30", "label": "18:30 · La Haye Sainte falls"},
+    {"id": "K8", "date": "1815-06-18T19:30", "label": "19:30 · The Imperial Guard is repulsed"},
+    {"id": "K9", "date": "1815-06-18T21:00", "label": "21:00 · The French army breaks and flees"}
+  ],
+  "regions": {
+    "allied_ridge": {"line": [[4.3895, 50.6815], [4.3990, 50.6797], [4.4047, 50.6797], [4.4121, 50.6802], [4.4220, 50.6806], [4.4339, 50.6812]], "width_km": 0.6},
+    "french_ridge": {"line": [[4.3850, 50.6650], [4.3990, 50.6648], [4.4136, 50.6668], [4.4260, 50.6690], [4.4390, 50.6712]], "width_km": 0.7}
+  },
+  "layers": [
+    {
+      "id": "allied", "name": "Anglo-allied army (Wellington)", "color": "#c0392b", "kind": "free",
+      "states": [
+        {"from": "K1", "region": "allied_ridge"},
+        {"from": "K7", "region": {"line": [[4.3895, 50.6815], [4.3990, 50.6800], [4.4047, 50.6805], [4.4121, 50.6818], [4.4220, 50.6812], [4.4339, 50.6812]], "width_km": 0.5}},
+        {"from": "K9", "region": {"line": [[4.3900, 50.6712], [4.3990, 50.6700], [4.4047, 50.6694], [4.4121, 50.6690], [4.4200, 50.6694], [4.4290, 50.6702]], "width_km": 0.6}}
+      ]
+    },
+    {
+      "id": "hougoumont", "name": "Hougoumont garrison", "color": "#e74c3c", "kind": "free",
+      "states": [{"from": "K1", "region": {"formation": [4.3948, 50.6706], "width_km": 0.35, "depth_km": 0.28, "facing": 180}}]
+    },
+    {
+      "id": "lhs", "name": "La Haye Sainte (KGL garrison)", "color": "#e74c3c", "kind": "free",
+      "states": [
+        {"from": "K1", "region": {"formation": [4.4121, 50.6779], "width_km": 0.16, "depth_km": 0.12, "facing": 180}},
+        {"from": "K7", "region": null}
+      ]
+    },
+    {
+      "id": "french", "name": "Armée du Nord (Napoleon)", "color": "#1f4e9c", "kind": "free",
+      "states": [
+        {"from": "K1", "region": "french_ridge"},
+        {"from": "K9", "region": {"formation": [4.4150, 50.6560], "width_km": 1.4, "depth_km": 0.9, "facing": 180, "rounding": 0.8}}
+      ]
+    },
+    {
+      "id": "guard", "name": "Imperial Guard", "color": "#14315f", "kind": "free",
+      "states": [
+        {"from": "K1", "region": {"formation": [4.4125, 50.6600], "width_km": 0.8, "depth_km": 0.45, "facing": 0}},
+        {"at": "K8", "region": {"formation": [4.4060, 50.6745], "width_km": 0.6, "depth_km": 0.35, "facing": 350}},
+        {"from": "K9", "region": null}
+      ]
+    },
+    {
+      "id": "derlon", "name": "d'Erlon's I Corps attack", "color": "#2f6ec7", "kind": "free",
+      "states": [
+        {"at": "K2", "region": {"formation": [4.4240, 50.6700], "width_km": 1.6, "depth_km": 0.45, "facing": 0}},
+        {"at": "K3", "region": {"formation": [4.4200, 50.6772], "width_km": 1.6, "depth_km": 0.45, "facing": 355}},
+        {"at": "K4", "region": {"formation": [4.4225, 50.6712], "width_km": 1.0, "depth_km": 0.3, "facing": 180}},
+        {"from": "K5", "region": null}
+      ]
+    },
+    {
+      "id": "prussian-iv", "name": "Prussian IV Corps (Bülow)", "color": "#3d4a57", "kind": "free",
+      "states": [
+        {"at": "K5", "region": {"formation": [4.4560, 50.6760], "width_km": 1.2, "depth_km": 0.6, "facing": 235}},
+        {"at": "K6", "region": {"formation": [4.4420, 50.6640], "width_km": 1.6, "depth_km": 0.7, "facing": 250}},
+        {"from": "K7", "region": {"formation": [4.4330, 50.6615], "width_km": 1.8, "depth_km": 0.7, "facing": 255}}
+      ]
+    },
+    {
+      "id": "prussian-i", "name": "Prussian I Corps (Zieten)", "color": "#5b6b7a", "kind": "free",
+      "states": [
+        {"at": "K8", "region": {"formation": [4.4380, 50.6800], "width_km": 0.9, "depth_km": 0.45, "facing": 230}},
+        {"from": "K9", "region": {"formation": [4.4290, 50.6730], "width_km": 1.0, "depth_km": 0.5, "facing": 200}}
+      ]
+    },
+    {
+      "id": "arrow-cavalry", "name": "Charge of the Union and Household brigades", "color": "#a93226", "kind": "free",
+      "states": [
+        {"at": "K4", "grow": true, "region": {"arrow": [[4.4150, 50.6815], [4.4185, 50.6765], [4.4205, 50.6700]], "width_km": 0.14, "head_km": 0.3}},
+        {"from": "K5", "region": null}
+      ]
+    },
+    {
+      "id": "arrow-ney", "name": "Ney's cavalry charges", "color": "#1a3f7a", "kind": "free",
+      "states": [
+        {"at": "K5", "grow": true, "region": {"arrow": [[4.4110, 50.6690], [4.4065, 50.6735], [4.4035, 50.6782]], "width_km": 0.16, "head_km": 0.3}},
+        {"from": "K6", "region": null}
+      ]
+    },
+    {
+      "id": "arrow-prussians", "name": "Prussian advance from Wavre", "color": "#3d4a57", "kind": "free",
+      "states": [
+        {"at": "K5", "grow": true, "region": {"arrow": [[4.4850, 50.6890], [4.4660, 50.6800], [4.4480, 50.6680]], "width_km": 0.2, "head_km": 0.4}},
+        {"from": "K6", "region": null}
+      ]
+    },
+    {
+      "id": "arrow-guard", "name": "Attack of the Imperial Guard", "color": "#14315f", "kind": "free",
+      "states": [
+        {"at": "K8", "grow": true, "region": {"arrow": [[4.4100, 50.6650], [4.4070, 50.6710], [4.4050, 50.6780]], "width_km": 0.16, "head_km": 0.3}},
+        {"from": "K9", "region": null}
+      ]
+    }
+  ],
+  "markers": [
+    {"title": "Hougoumont holds all day", "lon": 4.3948, "lat": 50.6706, "start": "K2", "end": "K9", "color": "#c0392b",
+     "description": "Guards and Nassau troops hold the walled farm against repeated French attacks from about 11:30."},
+    {"title": "Scots Greys and Union Brigade charge", "lon": 4.4185, "lat": 50.6760, "start": "K4", "color": "#c0392b"},
+    {"title": "Allied squares hold against Ney's cavalry", "lon": 4.4040, "lat": 50.6790, "start": "K5", "color": "#1f4e9c"},
+    {"title": "Fighting for Plancenoit", "lon": 4.4295, "lat": 50.6607, "start": "K6", "end": "K8", "color": "#3d4a57"},
+    {"title": "La Haye Sainte falls", "lon": 4.4121, "lat": 50.6779, "start": "K7", "color": "#1f4e9c",
+     "description": "The King's German Legion garrison runs out of ammunition and the farm falls to the French."},
+    {"title": "The Guard recoils: 'La Garde recule!'", "lon": 4.4055, "lat": 50.6770, "start": "K8", "color": "#c0392b"},
+    {"title": "Wellington and Blücher meet", "lon": 4.4136, "lat": 50.6683, "start": "K9", "color": "#6c3483",
+     "description": "Traditionally placed at La Belle Alliance, Napoleon's command post during the day."}
+  ],
+  "tests": [
+    {"at": "K1", "lon": 4.4047, "lat": 50.6797, "expect": "allied", "note": "ridge at the Lion's Mound site"},
+    {"at": "K1", "lon": 4.4136, "lat": 50.6668, "expect": "french", "note": "La Belle Alliance"},
+    {"at": "K1", "lon": 4.3948, "lat": 50.6706, "expect": "hougoumont"},
+    {"at": "K3", "lon": 4.4200, "lat": 50.6772, "expect": "derlon"},
+    {"at": "K7", "lon": 4.4295, "lat": 50.6607, "expect": "prussian-iv", "note": "Plancenoit"},
+    {"at": "K7", "lon": 4.4121, "lat": 50.6779, "expect_not": "lhs", "note": "La Haye Sainte lost"},
+    {"at": "K9", "lon": 4.4136, "lat": 50.6690, "expect": "allied", "note": "general advance"}
+  ]
+}

@@ -1,0 +1,16 @@
+{
+ "built": "2026-09-30",
+ "files": {
+  "admin0.geojson.gz": 1298250,
+  "admin1.geojson.gz": 2929694,
+  "cliopatria.topojson.gz": 3113558,
+  "lakes.geojson.gz": 430626,
+  "land.geojson.gz": 897135,
+  "places.tsv.gz": 5243017,
+  "rivers.geojson.gz": 987339
+ },
+ "params": {
+  "admin1_interval_m": 1200,
+  "clio_interval_m": 3000
+ }
+}

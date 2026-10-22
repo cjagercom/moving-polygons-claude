@@ -1,0 +1,23 @@
+{
+	"name": "moving-polygons",
+	"version": "1.0.0",
+	"license": "MIT",
+	"description": "Make animated historical maps (borders, armies, events) with Claude and put them in your Moving Polygons account.",
+	"author": {
+		"name": "Moving Polygons",
+		"url": "https://www.movingpolygons.com"
+	},
+	"homepage": "https://www.movingpolygons.com/create-with-ai",
+	"documentationUrl": "https://www.movingpolygons.com/create-with-ai",
+	"supportUrl": "https://www.movingpolygons.com/contact",
+	"privacyPolicyUrl": "https://www.movingpolygons.com/privacy",
+	"termsOfServiceUrl": "https://www.movingpolygons.com/terms",
+	"icon": "https://www.movingpolygons.com/icon-512.png",
+	"keywords": [
+		"maps",
+		"history",
+		"geography",
+		"animation",
+		"mcp"
+	]
+}

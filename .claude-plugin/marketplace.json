@@ -1,0 +1,15 @@
+{
+	"name": "moving-polygons",
+	"description": "Moving Polygons for Claude: a connector and a skill for making animated historical maps.",
+	"owner": {
+		"name": "Moving Polygons",
+		"url": "https://www.movingpolygons.com"
+	},
+	"plugins": [
+		{
+			"name": "moving-polygons",
+			"source": "./",
+			"description": "Make animated historical maps (borders, armies, events) with Claude and put them in your Moving Polygons account."
+		}
+	]
+}
